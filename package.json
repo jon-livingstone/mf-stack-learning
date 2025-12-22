@@ -1,0 +1,20 @@
+{
+  "name": "mf-stack-week1",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build:shared": "npm -w @mf/shared run build",
+    "test:shared": "npm -w @mf/shared run test",
+    "test:web": "npm -w @mf/web run test",
+    "dev:web": "npm -w @mf/shared run build && npm -w @mf/web run dev",
+    "dev:next": "npm -w @mf/next run dev",
+    "test": "npm run test:shared && npm run test:web",
+    "build": "npm run build:shared && npm -w @mf/web run build && npm -w @mf/next run build"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.16"
+  }
+}
