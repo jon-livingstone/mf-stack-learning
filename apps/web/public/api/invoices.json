@@ -1,0 +1,6 @@
+{
+  "data": [
+    { "id": "inv_001", "customerName": "Acme Co", "amountCents": 12500, "status": "unpaid" },
+    { "id": "inv_002", "customerName": "Blue Ocean LLC", "amountCents": 4999, "status": "paid" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mf-stack-learning",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "postinstall": "npm --workspace @mf/shared run build",
+    "build:shared": "npm --workspace @mf/shared run build",
+    "test:shared": "npm --workspace @mf/shared run test",
+    "test:web": "npm --workspace @mf/web run test",
+    "dev:web": "npm --workspace @mf/shared run build && npm --workspace @mf/web run dev",
+    "test": "npm --workspaces run test"
+  },
+  "overrides": {
+    "vite": "5.4.21"
+  }
+}
