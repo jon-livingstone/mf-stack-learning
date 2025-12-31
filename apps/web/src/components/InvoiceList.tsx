@@ -6,10 +6,10 @@ function formatMoney(cents: number) {
 
 export function InvoiceList({ invoices }: { invoices: Invoice[] }) {
   return (
-    <ul>
+    <ul aria-label="Invoices">
       {invoices.map((inv) => (
         <li key={inv.id}>
-          {inv.customerName} — {formatMoney(inv.amountCents)} — {inv.status}
+          <strong>{inv.customerName}</strong> — {formatMoney(inv.amountCents)} — {inv.status}
         </li>
       ))}
     </ul>
